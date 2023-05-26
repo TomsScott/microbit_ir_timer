@@ -8,10 +8,9 @@ basic.showLeds(`
     . # . . .
     . . . . .
     `)
-basic.pause(1000)
+basic.pause(100)
 basic.clearScreen()
 servos.P2.setAngle(0)
-basic.pause(1000)
 loops.everyInterval(1000, function () {
     Time += 1
 })
@@ -28,7 +27,7 @@ basic.forever(function () {
             serial.writeLine("")
             Time = 0
             basic.showNumber(Lap)
-            servos.P2.setAngle(65)
+            servos.P2.setAngle(5)
             basic.pause(300)
             servos.P2.setAngle(0)
         }
