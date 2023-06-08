@@ -14,6 +14,7 @@ basic.forever(function () {
     if (Lap <= 10) {
         if (BitMaker.read_Din_value(GrovePort.P0) == 0) {
             Lap += 1
+            serial.writeLine("")
             serial.writeLine("Lap " + ("" + Lap) + " finished at ")
             // Montrer le numero du tour avec le temps totale
             serial.writeNumber(control.millis() / 1000)
